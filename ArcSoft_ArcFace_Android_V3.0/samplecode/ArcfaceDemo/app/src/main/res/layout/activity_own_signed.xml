@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ownSigned">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_tishi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="本次签到成功"
+            android:textSize="20dp"
+            android:textColor="#3A5FCD"
+            android:textStyle="italic"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"/>
+        <android.support.v7.widget.SearchView
+            android:id="@+id/selectown_args"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="@string/selecttiaojian"
+            android:background="@drawable/edit_shape_"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="往期签到情况"
+            android:textSize="12dp"
+            android:textColor="#3A5FCD"
+            android:textStyle="italic"
+            android:layout_marginTop="3dp"/>
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"/>
+    </LinearLayout>
+
+</LinearLayout>

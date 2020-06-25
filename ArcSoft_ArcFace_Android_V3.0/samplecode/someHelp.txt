@@ -1,0 +1,6 @@
+/*！！！注意事项！！！*/
+0.因为这是我只花了一周时间做的人脸识别考勤课设题目，后台使用简单的Servlet，所以很多地方比较草率，比较僵硬，欢迎指正(^_^)，如果测试至少需要两台手机(一台模拟老师，一台模拟学生)
+1.涉及工具:androidStudio_3.5+eclipseJavaEE+Tomcat_9+mysql_5.7.25(centos_7)+Honor Play_COR-AL10_9
+2.因为我这是直接在虹软的官方demo上参照其官方文档进行修改，所以demo中SingleImageActivity和FaceAttrPreviewActivity已被修改，没带Activity后缀的是我添加的，如果要查看虹软官方原始的人脸识别demo请去官方查看下载
+3.项目中两个SDK(虹软和高德)的appid和sdkid分别是我在虹软平台和高德地图平台申请的，如有需要请自行申请，修改即可(虹软是在common.Constants下，高德是在清单文件中)
+4.realse下打包的apk可以直接安装使用，不过前提是服务器和数据库都已准备好，可以在局域网下通信(可以将手机，服务器和mysql所在机器连接到同一wifi测试)

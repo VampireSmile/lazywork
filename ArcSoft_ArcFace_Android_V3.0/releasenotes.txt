@@ -1,0 +1,64 @@
+﻿////////////////////////////////////////////////////////////////////////////////
+//                   ArcSoft FaceEngine SDK 		                          //        
+////////////////////////////////////////// /////////////////////////////////////
+
+Introduction:
+ArcSoft FaceEngine SDK provides the universal interfaces to detect the face information of face, like face detection, age estimation, gender estimation,face angle detection,face liveness detection,ir face liveness detection,face recognition.
+
+Publish date:
+11/29/2019
+
+Expire date：（only valid on rgb&ir liveness detection)
+12/20/2020
+
+Version:
+3.0.12021020101.2
+
+Supported platform:
+Android armeabi-v7a、arm64-v8a
+
+Compile Options:
+default
+
+Dependency:
+None
+
+Known issues:
+None.
+
+File List:
+|---doc
+|   |---ARCSOFT_ARC_FACE_DEVELOPER'S_GUIDE.pdf	开发说明文档
+|---libs
+|   |---armeabi-v7a
+|   |   |---libarcsoft_face.so				算法库
+|   |   |---libarcsoft_face_engine.so			引擎库
+|   |---arm64-v8a
+|   |   |---libarcsoft_face.so				算法库
+|   |   |---libarcsoft_face_engine.so			引擎库
+|   |--arcsoft_face.jar					引擎接口
+|---samplecode
+|   |---ArcfaceDemo					示例工程
+|---imageutil
+|   |---ArcSoftImageUtil.zip				图像处理SDK
+|---releasenotes.txt					说明文件
+
+
+Change Logs:
+2019.11.13
+1.激活和初始化接口加锁保护；
+2.激活和初始化接口加锁限制不支持多线程调用；
+3.更新活体、年龄、性别、人脸检测、人脸比对算法模型；
+4.IMAGE模式支持全角度以及单一角度；
+5.新增人证模式的人脸特征比对模型；
+6.新增一组接口，用于兼容更高精度的图像；
+7.初始化接口中检测角度参数变更为枚举类型；
+8.初始化接口中检测模式修改为枚举类型，全角度检测名称由ASF_OP_0_HIGHER_EXT变更为ASF_OP_ALL_OUT；
+9.此版本对人脸特征模型进行了升级，导致与2.X版本的模型不匹配，需要对2.X版本的人脸库进行重新注册;
+10.活体检测推荐阈值变更，RGB：0.5 IR：0.7；
+11.支持arm64-v8a架构；
+
+2019.11.29
+1.修复图像处理库中BGR24格式图像数据转换为RGB565格式Bitmap时颜色不对的问题；
+
+

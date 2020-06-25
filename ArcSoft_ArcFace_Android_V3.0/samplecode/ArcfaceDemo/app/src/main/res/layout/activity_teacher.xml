@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.teacher">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+<TextView
+    android:id="@+id/tv_aa"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="请选择签到班级(可多选)"
+    android:textColor="#3A5FCD"
+    android:textSize="15dp"
+    android:textStyle="bold"
+    android:layout_marginBottom="10dp"
+    android:layout_gravity="center_horizontal"/>
+
+            <LinearLayout
+                android:id="@+id/checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/checkbox0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="网络一班"
+                    android:textAlignment="center" />
+
+                <CheckBox
+                    android:id="@+id/checkbox1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="网络二班"
+                    android:textAlignment="center" />
+
+                <CheckBox
+                    android:id="@+id/checkbox2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="网络三班"
+                    android:textAlignment="center" />
+
+                <CheckBox
+                    android:id="@+id/checkbox3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="软件一班"
+                    android:textAlignment="center" />
+
+                <CheckBox
+                    android:id="@+id/checkbox4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="软件二班"
+                    android:textAlignment="center" />
+
+                <CheckBox
+                    android:id="@+id/checkbox5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="计算机一班"
+                    android:textAlignment="center" />
+
+                <CheckBox
+                    android:id="@+id/checkbox6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="计算机二班"
+                    android:textAlignment="center" />
+
+                <CheckBox
+                    android:id="@+id/checkbox7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="计算机三班"
+                    android:textAlignment="center" />
+
+                <CheckBox
+                    android:id="@+id/checkbox8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="计算机四班"
+                    android:textAlignment="center" />
+
+                <CheckBox
+                    android:id="@+id/checkbox9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="计算机五班"
+                    android:textAlignment="center" />
+
+                <CheckBox
+                    android:id="@+id/checkbox10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="计算机六班"
+                    android:textAlignment="center" />
+
+                <CheckBox
+                    android:id="@+id/checkbox11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="信安一班"
+                    android:textAlignment="center" />
+
+                <CheckBox
+                    android:id="@+id/checkbox12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="信安二班"
+                    android:textAlignment="center" />
+
+                <CheckBox
+                    android:id="@+id/checkbox13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="信安三班"
+                    android:textAlignment="center" />
+                <CheckBox
+                    android:id="@+id/checkbox14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="信安四班"
+                    android:textAlignment="center" />
+                <CheckBox
+                    android:id="@+id/checkbox15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="物联网一班"
+                    android:textAlignment="center" />
+                <CheckBox
+                    android:id="@+id/checkbox16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="物联网二班"
+                    android:textAlignment="center" />
+                <CheckBox
+                    android:id="@+id/checkbox17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="物联网三班"
+                    android:textAlignment="center" />
+
+
+                <CheckBox
+                    android:id="@+id/checkbox18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="大数据一班"
+                    android:textAlignment="center" />
+
+                <CheckBox
+                    android:id="@+id/checkbox19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="大数据二班"
+                    android:textAlignment="center" />
+                <CheckBox
+                    android:id="@+id/checkbox20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="大数据三班"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/et_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.4"
+                android:hint="指定签到时间(s)"
+                android:inputType="number"
+                android:background="@drawable/edit_shape_"
+                android:layout_gravity="center_vertical"/>
+        <Button
+            android:id="@+id/beginSigned"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@drawable/edit_text_shape"
+            android:text="发起签到"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</ScrollView>
