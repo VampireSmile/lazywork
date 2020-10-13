@@ -29,7 +29,7 @@
         <servlet_api1.version>2.5</servlet_api1.version>
         <servlet_api2.version>3.1.0</servlet_api2.version>
         <jsp_api_version>2.3.1</jsp_api_version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <gson.version>2.8.5</gson.version>
         <pageHelper.version>5.1.4</pageHelper.version>
         <hibernate_validator.version>5.4.1.Final</hibernate_validator.version>
