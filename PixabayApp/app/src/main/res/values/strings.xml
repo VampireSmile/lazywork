@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PixabayApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="gallery">Gallery</string>
+    <string name="photo">Photo</string>
+
+    <string name="pixabay_url"><![CDATA[https://pixabay.com/api/?key=19598617-193879ca95ceabd211975472e&q=]]></string>
+    <string name="refresh">Refresh</string>
+
+    <string name="gallery_photo_bundle_key">photoBundleKey</string>
+</resources>
