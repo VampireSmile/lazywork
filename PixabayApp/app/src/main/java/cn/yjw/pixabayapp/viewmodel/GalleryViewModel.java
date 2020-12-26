@@ -26,11 +26,11 @@ public class GalleryViewModel extends AndroidViewModel {
         photoLiveList = new MutableLiveData<>();
         repository = new PixabayDataRepository(application);
         //初始化LiveData数据
-        repository.fetchDataTo((MutableLiveData<List<PhotoItemEntity>>) photoLiveList);
+        repository.fetchDataTo((MutableLiveData<List<PhotoItemEntity>>) photoLiveList, null);
     }
 
-    public void fetchData() {
-        repository.fetchDataTo((MutableLiveData<List<PhotoItemEntity>>) photoLiveList);
+    public void fetchData(String param) {
+        repository.fetchDataTo((MutableLiveData<List<PhotoItemEntity>>) photoLiveList, param);
     }
 
     public LiveData<List<PhotoItemEntity>> getPhotoLiveList() {

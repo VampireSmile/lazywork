@@ -16,10 +16,16 @@ public class VolleySingleton {
 
     private volatile static RequestQueue requestQueue = null;
 
+    private VolleySingleton(Context context) {
+        if (requestQueue == null) {
+            requestQueue = Volley.newRequestQueue(context);
+        }
+    }
+
     /**
      * doubleCheck
      *
-     * @return
+     * @return VolleySingleton单例
      */
     public static VolleySingleton getInstance(Context context) {
         if (INSTANCE == null) {
@@ -34,11 +40,5 @@ public class VolleySingleton {
 
     public <T> void addRequest(Request<T> request) {
         requestQueue.add(request);
-    }
-
-    private VolleySingleton(Context context) {
-        if (requestQueue == null) {
-            requestQueue = Volley.newRequestQueue(context);
-        }
     }
 }

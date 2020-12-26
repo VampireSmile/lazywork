@@ -3,6 +3,7 @@ package cn.yjw.pixabayapp.repository.remote;
 import android.app.Application;
 import android.util.Log;
 
+import androidx.annotation.Nullable;
 import androidx.lifecycle.MutableLiveData;
 
 import com.android.volley.Request;
@@ -40,31 +41,28 @@ public class PixabayDataRepository {
      * 从Pixabay网站拉取数据并设置到LiveData中
      *
      * @param photoLiveList 被观察的LiveData
+     * @param param         url的参数
      */
-    public void fetchDataTo(MutableLiveData<List<PhotoItemEntity>> photoLiveList) {
-        String url = urlWrap(randomParam(DEFAULT_PARAMS));
+    public void fetchDataTo(MutableLiveData<List<PhotoItemEntity>> photoLiveList, @Nullable String param) {
+        String url = param == null ? urlWrap(randomParam(DEFAULT_PARAMS)) : urlWrap(param);
+        Log.d(TAG, "fetchDataUrl: " + url);
         StringRequest request = new StringRequest(Request.Method.GET, url,
                 response -> {
                     PixabayEntity pixabayEntity = new Gson().fromJson(response, PixabayEntity.class);
                     photoLiveList.setValue(pixabayEntity.getPhotoItemList());
                 },
-                error -> Log.e(TAG, "fetchDataTo: ", error));
+                error -> Log.e(TAG, "fetchDataTo:", error));
         VolleySingleton.getInstance(application).addRequest(request);
     }
 
     /**
      * 保对url进行组合包装
      *
-     * @param params 参数
+     * @param param 参数
      * @return 包装后的url
      */
-    private String urlWrap(String... params) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(application.getString(R.string.pixabay_url));
-        for (String param : params) {
-            sb.append(param).append('&');
-        }
-        return sb.substring(0, sb.length() - 1);
+    private String urlWrap(String param) {
+        return application.getString(R.string.pixabay_url) + param;
     }
 
     /**

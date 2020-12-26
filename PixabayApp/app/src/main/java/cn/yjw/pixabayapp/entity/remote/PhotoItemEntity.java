@@ -16,12 +16,25 @@ public class PhotoItemEntity implements Parcelable {
     private String webFormatUrl;
     @SerializedName("largeImageURL")
     private String largeImageUrl;
+    @SerializedName("webformatHeight")
+    private int imageHeight;
+    @SerializedName("user")
+    private String photoUser;
+    @SerializedName("likes")
+    private int photoLikes;
+    @SerializedName("favorites")
+    private int photoFavorites;
 
-    public PhotoItemEntity(int id, String type, String webFormatUrl, String largeImageUrl) {
+    public PhotoItemEntity(int id, String type, String webFormatUrl, String largeImageUrl,
+                           int imageHeight, String photoUser, int photoLikes, int photoFavorites) {
         this.id = id;
         this.type = type;
         this.webFormatUrl = webFormatUrl;
         this.largeImageUrl = largeImageUrl;
+        this.imageHeight = imageHeight;
+        this.photoUser = photoUser;
+        this.photoLikes = photoLikes;
+        this.photoFavorites = photoFavorites;
     }
 
     protected PhotoItemEntity(Parcel in) {
@@ -88,4 +101,49 @@ public class PhotoItemEntity implements Parcelable {
         this.largeImageUrl = largeImageUrl;
     }
 
+    public int getImageHeight() {
+        return imageHeight;
+    }
+
+    public void setImageHeight(int imageHeight) {
+        this.imageHeight = imageHeight;
+    }
+
+    public String getPhotoUser() {
+        return photoUser;
+    }
+
+    public void setPhotoUser(String photoUser) {
+        this.photoUser = photoUser;
+    }
+
+    public int getPhotoLikes() {
+        return photoLikes;
+    }
+
+    public void setPhotoLikes(int photoLikes) {
+        this.photoLikes = photoLikes;
+    }
+
+    public int getPhotoFavorites() {
+        return photoFavorites;
+    }
+
+    public void setPhotoFavorites(int photoFavorites) {
+        this.photoFavorites = photoFavorites;
+    }
+
+    @Override
+    public String toString() {
+        return "PhotoItemEntity{" +
+                "id=" + id +
+                ", type='" + type + '\'' +
+                ", webFormatUrl='" + webFormatUrl + '\'' +
+                ", largeImageUrl='" + largeImageUrl + '\'' +
+                ", imageHeight=" + imageHeight +
+                ", photoUser='" + photoUser + '\'' +
+                ", photoLikes=" + photoLikes +
+                ", photoFavorites=" + photoFavorites +
+                '}';
+    }
 }

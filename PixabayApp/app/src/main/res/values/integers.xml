@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="DEFAULT_PERMISSION_SDK_INT">29</integer>
+    <integer name="DEFAULT_REQUEST_PERMISSION_CODE">1</integer>
+</resources>

@@ -8,6 +8,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
 import cn.yjw.pixabayapp.R;
+import cn.yjw.pixabayapp.util.common.SimpleAsyncUtil;
 
 /**
  * @author yinjiawei
@@ -28,5 +29,11 @@ public class MainActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         navController.navigateUp();
         return super.onSupportNavigateUp();
+    }
+
+    @Override
+    protected void onDestroy() {
+        SimpleAsyncUtil.destroy();
+        super.onDestroy();
     }
 }
