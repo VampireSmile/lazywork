@@ -1,0 +1,23 @@
+server:
+  port: 8888
+spring:
+  datasource:
+    #mysql版本是5.7
+    #121.4.51.194是我mysql所在的腾讯云服务器主机，需要更改
+    #udb是我mysql为这项目所创建的数据库，需要更改
+    #用户名和密码也需要更改
+    url: jdbc:mysql://121.4.51.194:3306/udb?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: zachary
+    password: Async&poke@jw443
+    #mysql驱动版本为8以下的需要更改驱动写法,即去掉下面的cj
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  freemarker:
+    cache: false # 缓存配置 开发阶段应该配置为false 因为经常会改
+    suffix: .html # 模版后缀名 默认为ftl
+    charset: UTF-8 # 文件编码
+    template-loader-path: classpath:/templates/
+
+#mybatis config
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath*:/mappers/*Mapper.xml

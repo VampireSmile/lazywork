@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sboot.rbac.mappers.MyUserDetailsServiceMapper">
+    <select id="findUserDetail" parameterType="string" resultType="MyUserDetailsEntity">
+        SELECT username,password,enabled FROM user
+            WHERE username=#{queryStr} OR phone=#{queryStr}
+    </select>
+    <select id="findRoles" parameterType="string" resultType="string">
+        SELECT role_code FROM role r
+            LEFT JOIN user_role ur ON r.id=ur.role_id
+            LEFT JOIN user u ON ur.user_id=u.id
+            WHERE u.username=#{queryStr}
+    </select>
+</mapper>

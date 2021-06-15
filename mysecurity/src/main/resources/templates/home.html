@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>测试</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+
+<h1>测试用户权限</h1>
+<br>
+<a href="/user/self">只有user角色才可以点击哦</a>
+<br>
+<a href="/admin/self">只有admin用户才可以点击哦</a>
+<br>
+<br>
+<label for="pass">输入密码</label><input type="text" name="pass" id="pass"/>
+<input type="button" onclick="goEncode()" value="点击显示加密后的密码">
+<br>
+<h3 id="encodedPass"></h3>
+<br>
+<br>
+<a href="/logout">退出</a>
+<br>
+<script type="text/javascript">
+    function goEncode() {
+        let password = $("#pass").val();
+        if (password === "") {
+            alert("输入的密码不能为空");
+            return
+        }
+        $.ajax({
+            type: "get",
+            url: "/my/encode/" + password,
+            success: function (encodedPass) {
+                $('#encodedPass').text(encodedPass);
+            }
+        });
+    }
+</script>
+</body>
+</html>
