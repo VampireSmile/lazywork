@@ -24,7 +24,7 @@
         <mybatis_spring.version>1.3.1</mybatis_spring.version>
         <mybatis_generator.version>1.3.5</mybatis_generator.version>
         <c3p0.version>0.9.1.2</c3p0.version>
-        <mysql_connector_java.version>5.1.41</mysql_connector_java.version>
+        <mysql_connector_java.version>8.0.28</mysql_connector_java.version>
         <jstl.version>1.2</jstl.version>
         <servlet_api1.version>2.5</servlet_api1.version>
         <servlet_api2.version>3.1.0</servlet_api2.version>
